@@ -1,0 +1,134 @@
+/* --------------- home.ejs --------------- */
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  padding: 2rem;
+}
+
+/* Remove card style, allow full width layout */
+.mainPage .container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Welcome text */
+.welcome {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Main banner */
+.banner {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.mainPage h1{
+  span {
+    background: linear-gradient(90deg, #299DFF 20.77%, #B09AFF 51.15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Button tweaks */
+.mainPage .btn {
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  margin: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Register button (light) */
+.mainPage .btn-light {
+  background-color: #6FE6FC;
+  color: #1f2937;
+  border: none;
+}
+.mainPage .btn-light:hover {
+  background-color: #F4CE14;
+}
+
+/* Login button (dark) */
+.mainPage .btn-dark {
+  background-color: #B09AFF;
+  color: white;
+  border: none;
+}
+.mainPage .btn-dark:hover {
+  background-color: #4f46e5;
+}
+
+/*-------------- register.ejs and login.ejs --------------*/
+
+.registerPage {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.registerPage h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Card styling only here */
+.registerPage .card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.registerPage .card-body {
+  padding: 2rem;
+}
+
+.registerPage .form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.registerPage .form-control {
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s;
+}
+
+.registerPage .form-control:focus {
+  border-color: #6366f1;
+  box-shadow: none;
+}
+
+.registerPage .btn-dark {
+  background-color: #6366f1;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.registerPage .btn-dark:hover {
+  background-color: #4f46e5;
+}
+
+.registerPage .btn-social:hover {
+  background-color: #FF7601;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.registerPage .btn-social i {
+  font-size: 1.2rem;
+}
