@@ -3,6 +3,9 @@
 
 <div class="mainPage centered">
   <div class="container">
+    <% if (message) { %>
+    <script>alert("<%= message %>");</script>
+    <% } %>
     <h3 class="welcome">Welcome to ScheduleUp!</h3>
     <h1 class="banner"> Manage your team 
       <br> 
