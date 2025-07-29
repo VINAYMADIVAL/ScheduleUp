@@ -1,0 +1,72 @@
+<%- include('partials/header') %>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top dashboard-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/meetings">Meetings</a></li>
+        <li class="nav-item"><a class="nav-link" href="/account">Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page content -->
+<div class="dashboard-content">
+  <!-- My Workspace -->
+  <section class="section-block">
+    <h3>My Workspace - Weekly Schedule</h3>
+    <div class="table-responsive">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>10AM - 1PM</th>
+            <th>1PM - 2PM</th> <!-- Static Lunch -->
+            <th>2PM - 4PM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% userSchedule.forEach(row => { %>
+            <tr>
+              <td><%= row.day %></td>
+              <td><%= row["10AM - 1PM"] %></td>
+              <td style="color: gray;">Lunch Break</td> <!-- Static Cell -->
+              <td><%= row["2PM - 4PM"] %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- My Team -->
+  <section class="section-block">
+    <h3>My Team - Today's Schedule</h3>
+    <div class="table-responsive">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>10AM - 1PM</th>
+            <th>1PM - 2PM</th> <!-- Static Lunch -->
+            <th>2PM - 4PM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% teamSchedule.forEach(member => { %>
+            <tr>
+              <td><%= member.name %></td>
+              <td><%= member["10AM - 1PM"] %></td>
+              <td style="color: gray;">Lunch Break</td> <!-- Static Cell -->
+              <td><%= member["2PM - 4PM"] %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<%- include('partials/footer') %>
